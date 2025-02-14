@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rango_Numeros</title>
+    <style type="text/css">
+        body {
+            margin: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <table id="mytable" border="1"></table>
+    <input type="button" onclick="rango()" value="Iniciar" />
+
+    <script>
+        function rango(){
+            //declaro variables
+            var i;
+            minimo =parseInt( prompt('Ingresa numero minimo: '))
+            maximo = parseInt(prompt('Ingresa numero maximo: '))
+            resultado=parseInt(0);
+            
+            if (minimo < 0) {
+                resultado = (minimo * -1) + maximo;
+            } else {
+                resultado = maximo - minimo;
+            }
+            //generar bucle para mostrar rango
+            for (i =0; i<=resultado; i++) {
+                document.write(minimo + ", ");
+                minimo ++;
+            
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
